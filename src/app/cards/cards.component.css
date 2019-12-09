@@ -1,0 +1,24 @@
+
+agm-map {
+  height: 300px;
+ 
+}
+/* .container{
+  background-color: black;
+} */
+
+  .row{
+    background-color: black;
+  
+  }
+  .card-text{
+    color: rgb(143, 110, 172)
+  }
+
+  .col{
+    margin-top: 15px;
+    
+  }
+  .map, .model{
+    padding: 10px;
+  }

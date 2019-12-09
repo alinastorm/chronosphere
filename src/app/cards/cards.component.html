@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row rounded ">
+    <div class="col ">
+      <div class="card " *ngFor="let item of models" >
+        
+        <div class="row model">
+          <div class="col-md-6 black">
+            <img src="{{'http://ubt.by:8002/api/file.php?stat=ico&id='+ item?.FileID}}" class="img-fluid" alt="">
+            
+          </div>
+          <div class="col-md-6 map" >
+            <agm-map [latitude]="+item.locY" [longitude]="+item.locX" [zoom]=16 style="display: block;">
+              <agm-marker [latitude]="item.locY" [longitude]="item.locX"></agm-marker>
+            </agm-map>
+            <h6  class="text-center card-text">Координаты {{item.locY}} {{item.locX}}</h6>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="card-body">
+            <!-- <h5 class="card-title">{{item?.ReturnName}}</h5> -->
+            <p class="card-text">{{item?.Description}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
