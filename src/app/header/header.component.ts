@@ -6,5 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  navbarOpen = false;
+  toggleNavbar() {
+    this.navbarOpen = !this.navbarOpen;
+  }
 
 }

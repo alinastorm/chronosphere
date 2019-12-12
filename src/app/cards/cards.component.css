@@ -6,19 +6,27 @@ agm-map {
 /* .container{
   background-color: black;
 } */
-
-  .row{
-    background-color: black;
+.roz1{
+  background-color: rgb(77, 24, 102);
+}
+.roz2{
+  background-color: rgb(143, 110, 172)
+}
+.black{
+  background-color: black;
   
-  }
-  .card-text{
+}
+  .text-roz2{
     color: rgb(143, 110, 172)
   }
 
-  .col{
-    margin-top: 15px;
-    
-  }
+
   .map, .model{
     padding: 10px;
   }
+.row{
+  margin-bottom: 10px;
+}
+.ap{
+  background-color: rgba(0,0,0,0.5)
+}

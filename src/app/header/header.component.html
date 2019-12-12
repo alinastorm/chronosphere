@@ -1,35 +1,66 @@
-<div class="container"></div>
-<div class="row  justify-content-center">
+<div class="container ap">
+  <div class="row black">
+    <div class="col black">
+      <nav class="navbar navbar-expand-lg navbar-dark ">
+        <a class="navbar-brand text-roz2" href="#">
+          Chronosphere
+        </a>
+        <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " [ngClass]="{ 'show': navbarOpen }">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <!-- <a class="nav-link" href="#">Объекты</a> -->
+            </li>
 
-  <div class="col-md-2 ">
-    <img src="assets/img/logo.png" class="img-fluid" alt="">
+            <li class="nav-item">
+              <!-- <a class="nav-link" href="#">Сбор средств</a> -->
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+    </div>
+
   </div>
 
+
+
+  <div class="row  justify-content-center ">
+
+    <div class="col-md-2 ">
+      <img src="assets/img/logo.png" class="img-fluid" alt="">
+    </div>
+
+  </div>
+  <div class="row ">
+
+    <div class="col">
+      <br>
+      <h4 class="text-center text-roz2">Virtual travel in augmented reality</h4>
+      <br>
+    </div>
+
+  </div>
+
+
+  <div class="row justify-content-center ">
+
+    <div class="col-md-2">
+      <a href="assets/apk/chronosphere_0.3.7_10.apk" download>
+        <img src="assets/img/android.png" class="img-fluid" alt="">
+      </a>
+    </div>
+
+    <div class="col-md-2">
+      <a href="https://apps.apple.com/by/app/chronosphere/id1267373189">
+        <img src="assets/img/apple.png" class="img-fluid" alt="">
+      </a>
+    </div>
+  </div>
+  <br>
 </div>
-<div class="row">
-
-  <div class="col">
-    <h1 class="text-center" style="color:black">Chronosphere</h1>
-  </div>
-</div>
-
-
-<div class="row justify-content-center">
-
-  <div class="col-md-2">
-    <a href="assets/apk/chronosphere_0.3.7_10.apk" download>
-      <img src="assets/img/android.png" class="img-fluid" alt="">
-    </a>
-  </div>
-
-  <div class="col-md-2">
-    <a href="https://apps.apple.com/by/app/chronosphere/id1267373189">
-      <img src="assets/img/apple.png" class="img-fluid" alt="">
-    </a>
-  </div>
-</div>
-<br>
-
 
 <!-- 
 <a class="btn btn-primary fa fa-android" href="/src/chronosphere_0.3.7_10.apk" role="button" download>
