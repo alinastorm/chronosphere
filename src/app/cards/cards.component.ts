@@ -28,7 +28,7 @@ export class CardsComponent implements OnInit {
         return models;
       }))
       .subscribe(models => {
-        this.models = models.data.filter(item => item.Active == 1 && item.os == 0);
+        this.models = models.data.filter(item => item.Active == 1 && item.os == 1);
 
       }
       );

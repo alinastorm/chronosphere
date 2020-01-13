@@ -2,7 +2,7 @@
   <div class="row black">
     <div class="col black">
       <nav class="navbar navbar-expand-lg navbar-dark ">
-        <a class="navbar-brand text-roz2" href="#">
+        <a class="navbar-brand text-roz2" href="/">
           Chronosphere
         </a>
         <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
@@ -11,12 +11,12 @@
         <div class="collapse navbar-collapse " [ngClass]="{ 'show': navbarOpen }">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <!-- <a class="nav-link" href="#">Объекты</a> -->
+              <a class="nav-link" routerLink="video">Демонстрация</a>
             </li>
 
-            <li class="nav-item">
-              <!-- <a class="nav-link" href="#">Сбор средств</a> -->
-            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#">Сбор средств</a>
+            </li> -->
           </ul>
         </div>
       </nav>
@@ -45,7 +45,7 @@
   </div>
 
 
-  <div class="row justify-content-center ">
+  <div class="row justify-content-center fullScreen">
 
     <div class="col-md-2">
       <a href="assets/apk/chronosphere_0.3.7_10.apk" download>
@@ -62,14 +62,3 @@
   <br>
 </div>
 
-<!-- 
-<a class="btn btn-primary fa fa-android" href="/src/chronosphere_0.3.7_10.apk" role="button" download>
-  <span class="icon"></span>
-  <em>Download now for</em>
-  "iPhone"
-				
-</a>
-<a href="#" class="btn azm-social azm-size-64 azm-circle azm-long-shadow azm-dribbble">
-  <i class="fa fa-apple"></i></a>
-
-<a href="https://apps.apple.com/by/app/chronosphere/id1267373189" >IOS</a> -->
