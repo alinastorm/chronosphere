@@ -1,14 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent {
-  navbarOpen = false;
-  toggleNavbar() {
-    this.navbarOpen = !this.navbarOpen;
-  }
-
-}
+export class HeaderComponent {}

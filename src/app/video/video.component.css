@@ -2,13 +2,20 @@
   margin-bottom: 10px;
 }
 
-.roz1{
+hr{
   background-color: rgb(77, 24, 102);
 }
 
 .black{
   background-color: black;
   
+  
+}
+video1 {
+  width: 320;
+  height: 240px;
+  
+
 }
 
 

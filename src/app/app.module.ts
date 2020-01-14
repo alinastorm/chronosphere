@@ -12,10 +12,14 @@ import { CardsComponent } from './cards/cards.component';
 import { HeaderComponent } from './header/header.component';
 import { VideoComponent } from './video/video.component';
 import { RouterModule } from '@angular/router';
+import { NavComponent } from './nav/nav.component';
+import { AboutComponent } from './about/about.component';
 
 const routes = [
-  {path: '', component: CardsComponent},
+  {path: '', component: HeaderComponent},
   {path: 'video', component: VideoComponent},
+  {path: 'cards', component: CardsComponent},
+  {path: 'about', component: AboutComponent}
 
 ];
 
@@ -24,7 +28,9 @@ const routes = [
     AppComponent,
     CardsComponent,
     HeaderComponent,
-    VideoComponent
+    VideoComponent,
+    NavComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
