@@ -1,6 +1,12 @@
-.black{
-  background-color: black;
+.black {
+    background-color: black;
 }
-.text-roz2{
-  color: rgb(143, 110, 172)
+
+.text-roz2 {
+    color: rgb(143, 110, 172)
 }
+
+
+/* p {
+    font-size: 22pt
+} */
