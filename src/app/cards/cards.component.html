@@ -1,35 +1,35 @@
 <div class="ap pad">
 
-  <div class="row rounded black " *ngFor="let item of models">
+    <div class="row rounded no-gutters" *ngFor="let item of models">
 
-    <div class="col">
-      <hr class="roz1">
-      <div class="row model">
-        <div class="col-md-6 img-fluid mx-auto d-block">
+        <div class="col">
+
+            <div class="row no-gutters">
+
+                <div class="col-md-6 align-self-center p-2 ">
+
+                    <div class="_img img-fluid black">
+                        <img src="{{'http://ubt.by:8002/api/file.php?stat=ico&id='+ item?.FileID}}" class="img-fluid mx-auto d-block " alt="">
+                    </div>
+
+                </div>
+
+                <div class="_map col-md-6 align-self-center p-2">
+                    <agm-map [rotateControl]="true" [streetViewControl]="true" [fullscreenControl]="true" [mapTypeId]="'hybrid'" [latitude]="+item.locY" [longitude]="+item.locX" [zoom]=16 style="display: block;">
+                        <agm-marker [iconUrl]="'http://ubt.by:8002/api/file.php?stat=i&id='+ item?.FileID" [latitude]="item.locY" [longitude]="item.locX"></agm-marker>
+                    </agm-map>
+                    <!-- <h6 class="text-center roz2 rounded-bottom">Координаты: {{item.locY}} {{item.locX}} Угол: {{item.angle}}</h6> -->
 
 
-          <img src="{{'http://ubt.by:8002/api/file.php?stat=ico&id='+ item?.FileID}}" class="img-fluid mx-auto d-block "alt="">
+                </div>
+            </div>
 
+            <div class="_desc col no-gutters">
+
+                <p class="text-justify text-roz2">{{item?.Description}}</p>
+                <hr class="roz1">
+            </div>
 
         </div>
-        <div class="col-md-6 map">
-          <agm-map [rotateControl]="true" [streetViewControl]="true" [fullscreenControl]="true" [mapTypeId]="'hybrid'"
-            [latitude]="+item.locY" [longitude]="+item.locX" [zoom]=16 style="display: block;">
-            <agm-marker [iconUrl]="'http://ubt.by:8002/api/file.php?stat=i&id='+ item?.FileID" [latitude]="item.locY"
-              [longitude]="item.locX"></agm-marker>
-          </agm-map>
-          <h6 class="text-center roz2 rounded-bottom">Координаты: {{item.locY}} {{item.locX}} Угол: {{item.angle}}</h6>
-
-
-        </div>
-      </div>
-
-      <div class="col">
-
-        <p class="text-justify text-roz2">{{item?.Description}}</p>
-      </div>
-
-      <hr class="roz1">
     </div>
-  </div>
 </div>

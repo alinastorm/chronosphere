@@ -1,9 +1,11 @@
-.black{
-  background-color: black;
+.black {
+    background-color: black;
 }
-.container{
-  background-color: rgba(0,0,0,0.5)
+
+.container {
+    background-color: rgba(0, 0, 0, 0.5)
 }
-.text-roz2{
-  color: rgb(143, 110, 172)
+
+.text-roz2 {
+    color: rgb(143, 110, 172)
 }
