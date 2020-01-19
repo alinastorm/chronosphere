@@ -1,25 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
-import { AgmCoreModule } from '@agm/core';
+
 import { HttpClientModule } from '@angular/common/http';
-import { CardsComponent } from './cards/cards.component';
 import { HeaderComponent } from './header/header.component';
-import { VideoComponent } from './video/video.component';
-import { RouterModule, PreloadingStrategy, PreloadAllModules } from '@angular/router';
+import { RouterModule, PreloadAllModules } from '@angular/router';
 import { NavComponent } from './nav/nav.component';
 import { AboutComponent } from './about/about.component';
 
+
 const routes = [
-  {path: '', component: HeaderComponent},
-  {path: 'video', component: VideoComponent},
-  {path: 'cards', component: CardsComponent},
-  {path: 'about', component: AboutComponent},
+  { path: '', component: HeaderComponent },
+  { path: 'cards', loadChildren: './cards/cards.module#CardsModule' },
+  { path: 'video', loadChildren: './video/video.module#VideoModule' },
+  { path: 'about', component: AboutComponent },
   { path: '**', redirectTo: '' }
 
 ];
@@ -27,9 +25,7 @@ const routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    CardsComponent,
     HeaderComponent,
-    VideoComponent,
     NavComponent,
     AboutComponent
   ],
@@ -37,13 +33,9 @@ const routes = [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
     HttpClientModule,
-    AgmCoreModule.forRoot({
-      // apiKey: 'AIzaSyChFFNDOCAoxr3CgC4HIbAi_GpgLQkTXDI'
-      // apiKey: 'AIzaSyDWYw9e3VDQNUFfG-BhBDlYEPlGxzoEcK0'
-      apiKey: 'AIzaSyChFFNDOCAoxr3CgC4HIbAi_GpgLQkTXDI'
-    })
+
   ],
   providers: [],
   bootstrap: [AppComponent]
