@@ -12,6 +12,9 @@ export class NavComponent {
   toggleNavbar() {
     this.navbarOpen = !this.navbarOpen;
   }
+  showNavbarFalse() {
+    this.navbarOpen = false;
+  }
 
 
 }
