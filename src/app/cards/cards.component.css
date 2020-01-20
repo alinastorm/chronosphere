@@ -14,3 +14,19 @@ img {
 .text-roz2 {
     color: rgb(143, 110, 172)
 }
+._invisible{
+    opacity:0;
+}
+.visibleWithPause{
+    opacity:1;
+transition: 5s;
+}
+.visible{
+    
+      -webkit-transition: none !important;
+      -moz-transition: none !important;
+      -ms-transition: none !important;
+      -o-transition: none !important;
+    
+    opacity: 1;
+}

@@ -8,19 +8,25 @@
 
                 <div class="col-md-6 align-self-center p-2 ">
 
-                    <div class="_img img-fluid black">
-                        <img src="{{'http://ubt.by:8002/api/file.php?stat=ico&id='+ item?.FileID}}" class="img-fluid mx-auto d-block " alt="">
+                    <div class="_img img-fluid black " >
+                        <img  src="{{'http://ubt.by:8002/api/file.php?stat=ico&id='+ item?.FileID}}" class="img-fluid mx-auto d-block " alt="">
                     </div>
 
                 </div>
 
                 <div class="_map col-md-6 align-self-center p-2">
-                    <agm-map [rotateControl]="true" [streetViewControl]="true" [fullscreenControl]="true" [mapTypeId]="'hybrid'" [latitude]="+item.locY" [longitude]="+item.locX" [zoom]=16 style="display: block;">
-                        <agm-marker [iconUrl]="'http://ubt.by:8002/api/file.php?stat=i&id='+ item?.FileID" [latitude]="item.locY" [longitude]="item.locX"></agm-marker>
+
+
+                    
+
+
+
+                    <agm-map (tilesLoaded)= "opacity = true" class="_invisible" [ngClass]="{visible:opacity,visibleWithPause: opacityWithPause}"  [rotateControl]="true" [streetViewControl]="true"
+                        [fullscreenControl]="true" [mapTypeId]="'hybrid'" [latitude]="+item.locY"
+                        [longitude]="+item.locX" [zoom]=16 style="display: block;" >
+                        <agm-marker [iconUrl]="'http://ubt.by:8002/api/file.php?stat=i&id='+ item?.FileID"
+                            [latitude]="item.locY" [longitude]="item.locX"></agm-marker>
                     </agm-map>
-                    <!-- <h6 class="text-center roz2 rounded-bottom">Координаты: {{item.locY}} {{item.locX}} Угол: {{item.angle}}</h6> -->
-
-
                 </div>
             </div>
 

@@ -13,13 +13,15 @@ export class CardsComponent implements OnInit {
 
 
   public models;
-
-
+  opacity = false;
+  opacityWithPause = false;
   constructor(private _modelsService: ModelsService) {
 
   }
 
   ngOnInit(): void {
+
+    setTimeout(() => this.opacityWithPause = true, 100);
     this._modelsService.getModels().pipe(
       map(models => {
         for (const iterator of models.data) {
@@ -34,5 +36,7 @@ export class CardsComponent implements OnInit {
       );
 
   }
+
+
 
 }
